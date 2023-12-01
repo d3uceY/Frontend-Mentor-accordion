@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap');
+
+* {
+    padding: 0px;
+    box-sizing: border-box;
+    margin: 0px;
+    font-family: 'Work Sans', sans-serif;
+}
+
+:root {
+    --light-pink: hsl(275, 100%, 97%);
+    --Grayish-purple: hsl(292, 16%, 49%);
+    --Dark-purple: hsl(292, 42%, 14%);
+}
+
+/* boiler plate css */
+.flex {
+    display: flex;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.hidden{
+  display: none;
+}
+
+/* boiler plate css */
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: var(--light-pink);
+    background-image: url(/assets/images/background-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+main {
+    max-width: 600px;
+    padding: 50px;
+    border-radius: 20px;
+    background: white;
+    margin: 0px 20px;
+}
+
+
+h2 {
+    color: var(--Dark-purple);
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 4rem;
+    gap: 30px;
+    color: var(--Dark-purple);
+}
+
+
+p{
+    color: var(--Grayish-purple);
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.accordion-container{
+    margin-top: 30px;
+}
+
+.accordion{
+    overflow: hidden;
+    height: auto;
+    transition: 250ms;
+}
+
+.accordion #accordion-content{
+    display: block;
+}
+
+.accordion:not(:last-child){
+    border-bottom: 2px solid var(--light-pink);
+}
+
+
+.accordion > div:nth-child(1){
+    height: 70px;
+    justify-content: space-between;
+}
+
+button{
+    background: transparent;
+    border: 0px;
+    outline: 0px;
+    cursor: pointer;
+}
+
+/* collapse */
+
+.accordion.collapse{
+    height: 75px;
+}
+
+.accordion.collapse #accordion-content{
+    display: none;
+}
+/* collapse */
+
+
+@media screen and (max-width: 500px){
+   .wrapper{
+    background-image: url(/assets/images/background-pattern-mobile.svg);
+    background-size: contain;
+   }
+
+   h1{
+    font-size: 2rem;
+   }
+
+   h2, p{
+    font-size: 14px;
+   }
+
+   .accordion-container{
+    margin-top: 0px;
+   }
+
+   main{
+    padding: 20px;
+   }
+
+   img[alt="star-icon"]{
+      width: 30px;
+      margin-top: 7px;
+   }
+}
+
+.attribution{
+    padding: 20px;
+}
